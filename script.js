@@ -133,27 +133,6 @@ musicToggle.addEventListener("click", async () => {
 
 startButton.addEventListener("click", startExperience);
 
-if (video) {
-  video.addEventListener("play", () => {
-    if (!music.paused) {
-      music.dataset.resumeAfterVideo = "true";
-      music.pause();
-      setMusicButtonState();
-    }
-  });
-
-  const resumeMusic = () => {
-    if (music.dataset.resumeAfterVideo === "true") {
-      music.play().catch(() => {});
-      delete music.dataset.resumeAfterVideo;
-      setMusicButtonState();
-    }
-  };
-
-  video.addEventListener("pause", resumeMusic);
-  video.addEventListener("ended", resumeMusic);
-}
-
 function createFloatingElement() {
   if (main.classList.contains("hidden")) return;
 

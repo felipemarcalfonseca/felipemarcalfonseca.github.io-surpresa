@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para Alice ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="intro">
+  <div class="glass">
+    <div class="heart">❤</div>
+    <h1>Para Alice</h1>
+    <p class="subtitle">Preparei algo especial para você.</p>
+    <p class="hint">Toque no coração para começar.</p>
+    <button id="startBtn" aria-label="Começar">❤️</button>
+  </div>
+</div>
+
+<audio id="bgm" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<main id="main" class="hidden">
+  <section class="hero">
+    <h2>Nossa história</h2>
+    <p>Cada segundo ao seu lado faz parte da lembrança mais bonita que eu poderia ter.</p>
+  </section>
+
+  <section class="counter-card">
+    <h3>Estamos juntos há</h3>
+    <div id="counter"></div>
+  </section>
+
+  <section class="video-card">
+    <video controls playsinline preload="metadata">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <footer>
+    Com amor,<br><strong>Felipe ❤️</strong>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

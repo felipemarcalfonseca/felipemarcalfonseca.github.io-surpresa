@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Para Alice ❤️</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8dbe6">
+  <title>Para Alice ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
 
-<div id="intro">
-  <div class="glass">
-    <div class="heart">❤</div>
-    <h1>Para Alice</h1>
-    <p class="subtitle">Preparei algo especial para você.</p>
-    <p class="hint">Toque no coração para começar.</p>
-    <button id="startBtn" aria-label="Começar">❤️</button>
-  </div>
-</div>
-
-<audio id="bgm" loop>
-  <source src="musica.mp3" type="audio/mpeg">
-</audio>
-
-<main id="main" class="hidden">
-  <section class="hero">
-    <h2>Nossa história</h2>
-    <p>Cada segundo ao seu lado faz parte da lembrança mais bonita que eu poderia ter.</p>
+  <section id="intro" class="intro">
+    <div class="intro-card">
+      <span class="eyebrow">Uma lembrança feita com amor</span>
+      <h1>Para Alice</h1>
+      <p>Preparei algo especial para você.</p>
+      <button id="startBtn" class="heart-button" type="button" aria-label="Começar">
+        <span>❤</span>
+      </button>
+      <small>Toque no coração para começar</small>
+    </div>
   </section>
 
-  <section class="counter-card">
-    <h3>Estamos juntos há</h3>
-    <div id="counter"></div>
-  </section>
+  <audio id="bgm" loop preload="auto">
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
 
-  <section class="video-card">
-    <video controls playsinline preload="metadata">
-      <source src="video.mp4" type="video/mp4">
-    </video>
-  </section>
+  <main id="main" class="main hidden">
+    <button id="musicToggle" class="music-toggle" type="button" aria-label="Pausar música">
+      <span id="musicIcon">♫</span>
+      <span id="musicText">Música ligada</span>
+    </button>
 
-  <footer>
-    Com amor,<br><strong>Felipe ❤️</strong>
-  </footer>
-</main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Desde 15 de janeiro de 2023</span>
+        <h2>Nossa história, contada em cada segundo</h2>
+        <p>Cada momento ao seu lado se transformou em uma lembrança que eu guardo com carinho.</p>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <section class="counter-section">
+      <div class="section-heading">
+        <span class="eyebrow">O tempo que já vivemos</span>
+        <h3>Estamos juntos há</h3>
+      </div>
+      <div id="counter" class="counter-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="video-section">
+      <div class="section-heading">
+        <span class="eyebrow">Um momento para guardar</span>
+        <h3>Nosso vídeo</h3>
+      </div>
+      <div class="video-frame">
+        <video controls playsinline preload="metadata">
+          <source src="video.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Algumas histórias são contadas em páginas.</p>
+      <p>A nossa é contada em cada segundo que vivemos juntos.</p>
+      <strong>Com amor, Felipe ❤️</strong>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

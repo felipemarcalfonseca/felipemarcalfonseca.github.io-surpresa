@@ -126,7 +126,6 @@ musicToggle.addEventListener("click", async () => {
   if (music.paused) {
     try { await music.play(); } catch (error) {}
   } else {
-    music.pause();
   }
   setMusicButtonState();
 });
